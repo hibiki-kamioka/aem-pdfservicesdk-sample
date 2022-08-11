@@ -19,9 +19,9 @@ Build Tool: The application requires Maven to be installed. Maven installation i
 | 8, 11 | 3.3.9+ | AEMaaCS, 6.5.0+ | 
 
 ### Confirmed operating environment
-| Java JDK | Maven | AEM | PDF Services SDK |
-----|----|----|---- 
-| 11 | 3.8.4 | AEM SDK (2022.7.8085) local | 2.2.2 |
+| Java JDK | Maven | AEM | Archetype | PDF Services SDK |
+----|----|----|----|---- 
+| 11 | 3.8.4 | AEM SDK (2022.7.8085) local | 35 | 2.2.2 |
 
   
 ## OSGi bundling non OSGi jars
