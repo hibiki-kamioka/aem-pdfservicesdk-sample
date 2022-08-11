@@ -63,8 +63,12 @@ The sample servlet is based on the source code provided in [pdfservices-java-sdk
 
 ### Converts an HTML file specified by a URL to a PDF file
 #### Execution method
-`http://localhost:4502/bin/pdftest` 
-  
+`http://localhost:4502/bin/pdftest`　　
+
+*Notes*  
+- It takes a while to display the pdf.  
+
+
 Refrence : [CreatePDFFromURL](https://github.com/adobe/pdfservices-java-sdk-samples/blob/master/src/main/java/com/adobe/pdfservices/operation/samples/createpdf/CreatePDFFromURL.java)  
 
 
@@ -73,10 +77,4 @@ Refrence : [CreatePDFFromURL](https://github.com/adobe/pdfservices-java-sdk-samp
 `http://localhost:4502/bin/pdfmerge`
   
 Refrence : [MergeDocumentToPDF](https://github.com/adobe/pdfservices-java-sdk-samples/blob/2b41463d2c141cc906387b336a14c77f1a724dd9/src/main/java/com/adobe/platform/operation/samples/documentmerge/MergeDocumentToPDF.java)  
-
-
-
-
-
-
 
