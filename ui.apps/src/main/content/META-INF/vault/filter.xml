@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/pdfservice/clientlibs"/>
+    <filter root="/apps/pdfservice/components"/>
+    <filter root="/apps/pdfservice/i18n"/>
+</workspaceFilter>

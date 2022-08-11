@@ -1,0 +1,30 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.pdfservice</groupId>
+        <artifactId>pdfservice</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <groupId>com.pdfservice.bundles</groupId>
+    <artifactId>bundles</artifactId>
+    <name>pdfservice - Bundles</name>
+    <packaging>pom</packaging>
+    
+    <modules>
+        <module>pdfservices-sdk</module>
+    </modules>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.felix</groupId>
+                    <artifactId>maven-bundle-plugin</artifactId>
+                    <version>5.1.8</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>

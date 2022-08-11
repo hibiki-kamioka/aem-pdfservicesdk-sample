@@ -1,0 +1,85 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.pdfservice.bundles</groupId>
+        <artifactId>bundles</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <groupId>com.pdfservice.bundles</groupId>
+    <artifactId>pdfservices-sdk</artifactId>
+    <packaging>bundle</packaging>
+    <name>pdfservice - Bundles - pdfservices-sdk</name>
+
+    <properties>
+        <pdfservices-sdk.version>2.2.2</pdfservices-sdk.version>
+    </properties>
+    
+    <dependencies>
+        <dependency>
+            <groupId>com.adobe.documentservices</groupId>
+            <artifactId>pdfservices-sdk</artifactId>
+            <version>${pdfservices-sdk.version}</version>
+        </dependency>
+    </dependencies>
+
+    <!-- ====================================================================== -->
+    <!-- B U I L D D E F I N I T I O N -->
+    <!-- ====================================================================== -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.sling</groupId>
+                <artifactId>sling-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Import-Package>
+                            javax.activation,
+                            javax.mail.*,
+                            javax.naming,
+                            javax.net.*,
+                            javax.xml.*,
+                            org.apache.commons.codec,
+                            org.apache.commons.collections4,
+                            org.apache.commons.io,
+                            org.apache.commons.logging,
+                            org.slf4j,
+                            org.xml.sax,
+                            org.json;version=20090211.0.0,
+                        </Import-Package>
+                        <Export-Package>
+                            com.adobe.pdfservices.*;version=${pdfservices-sdk.version},
+                        </Export-Package>
+                        <Include-Resource>
+                            bc-fips-*.jar;lib:=true,
+                            classmate-*.jar;lib:=true,
+                            failsafe-*.jar;lib:=true,
+                            hibernate-validator-*.jar;lib:=true,
+                            hibernate-validator-cdi-*.jar;lib:=true,
+                            httpclient-*.jar;lib:=true,
+                            httpcore-*.jar;lib:=true,
+                            httpmime-*.jar;lib:=true,
+                            jackson-databind-*.jar;lib:=true,
+                            jackson-annotations-*.jar;lib:=true,
+                            jackson-core-*.jar;lib:=true,
+                            jakarta.validation-api-*.jar;lib:=true,
+                            javax.el-*.jar;lib:=true,
+                            javax.el-api-*.jar;lib:=true,
+                            jboss-logging-*.jar;lib:=true,
+                            jcip-annotations-*.jar;lib:=true,
+                            nimbus-jose-jwt-*.jar;lib:=true,
+                            uritemplate-*.jar;lib:=true,
+                        </Include-Resource>
+                        <Embed-Dependency>*;scope=compile;inline=true</Embed-Dependency>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
